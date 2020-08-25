@@ -10,7 +10,7 @@ The second half of this challange, is that Windows Virtual Desktop service requi
 
 ###  Diagram below shows the Microsoft Windows Virtual Desktop environment. Control plane and Desktops (VNET).
 
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/O365_IP_ADDRESSES_TO_UDR/wvd1.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/O365_IP_ADDRESSES_TO_UDR/wvd1.png)</kbd>
 
 
 <pre lang= >
