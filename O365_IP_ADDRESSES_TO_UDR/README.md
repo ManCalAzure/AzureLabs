@@ -27,12 +27,12 @@ The second half of this challange, is that Windows Virtual Desktop service requi
 
 ### These are the results of the script:
 ### Since my subnet is called wvd, a route table was created 'wvd-RT'
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/O365_IP_ADDRESSES_TO_UDR/img-1.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/O365_IP_ADDRESSES_TO_UDR/img-1.png)</kbd>
 
 ### The new route table 'wvd-RT' has all of the Office365 routes populated with NextHop 'Internet'
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/O365_IP_ADDRESSES_TO_UDR/img-2.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/O365_IP_ADDRESSES_TO_UDR/img-2.png)</kbd>
 
 ### The new route table 'wvd-RT' was associated with the subnet 'wvd'
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/O365_IP_ADDRESSES_TO_UDR/img-3.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/O365_IP_ADDRESSES_TO_UDR/img-3.png)</kbd>
 
 ### This lab will be updated continually, as more features become available. Such as, UDR service tags ....
