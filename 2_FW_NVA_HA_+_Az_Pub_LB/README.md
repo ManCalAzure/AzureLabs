@@ -30,7 +30,7 @@ The Azure public load balancer can be configured in two ways (This lab is focuse
 
 ### Topology Details - Simple Trust and Untrust topology. This lab is applicable, if the target backend VM was running on a peered spoke VNET (UDR required on spoke).
 
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/2_FW_NVA_HA_%2B_Az_Pub_LB/topology1.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/2_FW_NVA_HA_%2B_Az_Pub_LB/topology1.png)</kbd>
 
 ### Elements required
 <pre lang= >
@@ -134,7 +134,7 @@ az network nic update --resource-group RG-PLB-TEST --name VSRX2-ge0 --network-se
 5- Created the NSGs
 </pre>
 
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/2_FW_NVA_HA_%2B_Az_Pub_LB/topology2.png)
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/2_FW_NVA_HA_%2B_Az_Pub_LB/topology2.png)
 </kbd>
 
 ### Create the vSRX firewall VMs
@@ -170,7 +170,7 @@ az network nic ip-config update -g RG-PLB-TEST --nic-name VSRX1-ge0 -n ipconfig1
 az network nic ip-config update -g RG-PLB-TEST --nic-name VSRX2-ge0 -n ipconfig1 --lb-address-pool PLB1-BEPOOL --vnet-name hub-vnet --subnet O-UNTRUST --lb-name AZ-PUB-LB
 </pre>
 
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/2_FW_NVA_HA_%2B_Az_Pub_LB/topology1.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/2_FW_NVA_HA_%2B_Az_Pub_LB/topology1.png)</kbd>
 
 ### Get a list of the public IPs, or specific instances public IPs
 <pre lang= >
@@ -290,7 +290,7 @@ Total sessions: 2
 </pre>
 ### Test connection to the backend Web server via the Public LB IP address - It works ;) you can shut down a vSRX and traffic will continue to flow
 
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/2_FW_NVA_HA_%2B_Az_Pub_LB/apache.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/2_FW_NVA_HA_%2B_Az_Pub_LB/apache.png)</kbd>
 
 At this point, you have an Azure Standard SKU public load balancer. This load balancer will forward traffic to two firewalls (vSRXs) network virtual appliances (NVAs). 
 
