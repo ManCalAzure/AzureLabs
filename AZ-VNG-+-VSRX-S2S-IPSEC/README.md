@@ -43,7 +43,7 @@ az network vpn-connection create -g RG-GW-TEST -n CONNECITON-1 --vnet-gateway1 G
 <pre lang= >
 <b>Azure VNG details Portal view</b>
 </pre>
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/AZ-VNG-%2B-VSRX-S2S-IPSEC/gw-view.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/AZ-VNG-%2B-VSRX-S2S-IPSEC/gw-view.png)</kbd>
 
 
 ### Juniper SRX Configuration
@@ -107,7 +107,7 @@ set security policies from-zone VPN-ZONE to-zone TRUST policy VPN-ZONE-TRUST the
 </pre>
 
 <b>Portal verification that tunnel is connected</b>
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/AZ-VNG-%2B-VSRX-S2S-IPSEC/portal-up.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/AZ-VNG-%2B-VSRX-S2S-IPSEC/portal-up.png)</kbd>
 
 <b>SRX on-prem tunnel verification</b>
 <pre lang= >
