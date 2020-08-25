@@ -2,7 +2,7 @@
 
 #### Topology
 <table><tr><td>
-    <img src="https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/2_FW_NVA_HA_%2B_Az_Pub_%2B_Int_LB/topo-diagram.png" lt="" title="Lab Topology" width="400" height="600"  />
+    <img src="https://github.com/ManCalAzure/AzureLabs/blob/master/2_FW_NVA_HA_%2B_Az_Pub_%2B_Int_LB/topo-diagram.png" lt="" title="Lab Topology" width="400" height="600"  />
 </td></tr></table>
 
 ### Lab Configuration Elements
@@ -372,7 +372,7 @@ set security policies from-zone TRUST to-zone TRUST policy TRUST-TO-TRUST then l
 
 ### After configuring the firewalls, you should be able to connect to the web server through the public LB IP address
 
-<kbd>![alt text](https://raw.githubusercontent.com/ManCalAzure/AzureLabs/master/AzureSpecificDesigns/2_FW_NVA_HA_%2B_Az_Pub_%2B_Int_LB/apache2.png)</kbd>
+<kbd>![alt text](https://github.com/ManCalAzure/AzureLabs/blob/master/2_FW_NVA_HA_%2B_Az_Pub_%2B_Int_LB/apache2.png)</kbd>
 
 Complete firewall configuration is attached to the lab folder.
 
