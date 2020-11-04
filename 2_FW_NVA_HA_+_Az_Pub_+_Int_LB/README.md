@@ -132,6 +132,9 @@ az network nic update --resource-group RG-LB-TEST --name VSRX2-ge1 --network-sec
 * Created the vNICs for the firewalls, and the web server
 * Created the NSGs for the management subnet (MGT) and UNTRUST subnet.
 
+### Accept terms
+az vm image terms accept --urn juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-byol:19.42.2
+
 <p style="page-break-after: always;">&nbsp;</p>
 --------------------------------------------------------------------------------------------------------------
 <p style="page-break-before: always;">&nbsp;</p>
