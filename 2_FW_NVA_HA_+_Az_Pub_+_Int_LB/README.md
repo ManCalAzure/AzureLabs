@@ -132,9 +132,6 @@ az network nic update --resource-group RG-LB-TEST --name VSRX2-ge1 --network-sec
 * Created the vNICs for the firewalls, and the web server
 * Created the NSGs for the management subnet (MGT) and UNTRUST subnet.
 
-### Accept terms
-az vm image terms accept --urn juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-byol:19.42.2
-
 <p style="page-break-after: always;">&nbsp;</p>
 --------------------------------------------------------------------------------------------------------------
 <p style="page-break-before: always;">&nbsp;</p>
@@ -142,8 +139,7 @@ az vm image terms accept --urn juniper-networks:vsrx-next-generation-firewall-pa
 ### Create the vSRX Firewalls, and the web server VMs
 <pre lang= >
 <b>First - Accept the Juniper Networks license agreement</b>
-In PowerShell
-Get-AzureRmMarketplaceTerms -Publisher juniper-networks -Product vsrx-next-generation-firewall -Name vsrx-byol-azure-image | Set-AzureRmMarketplaceTerms -Accept
+az vm image terms accept --urn juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-byol:19.42.2
 
 VSRX1
 az vm create --resource-group RG-LB-TEST --location eastus --name VSRX1 --size Standard_DS3_v2 --nics VSRX1-fxp0 VSRX1-ge0 VSRX1-ge1 --image juniper-networks:vsrx-next-generation-firewall:vsrx-byol-azure-image:19.2.1 --admin-username lab-user --admin-password AzLabPass1234 --boot-diagnostics-storage mcbootdiag --no-wait
