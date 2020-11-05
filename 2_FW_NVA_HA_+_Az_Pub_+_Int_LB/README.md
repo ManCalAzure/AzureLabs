@@ -228,7 +228,7 @@ az network nic ip-config update -g RG-LB-TEST --nic-name VSRX2-ge0 -n ipconfig1 
 <pre lang= >
 az network public-ip list --output table
 
-Ror specific instance
+For specific instance
 az network public-ip show -g RG-LB-TEST --name VSRX1-PIP-1 --output table
 </pre>
 
