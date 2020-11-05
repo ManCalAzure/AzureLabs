@@ -238,10 +238,10 @@ az network public-ip show -g RG-LB-TEST --name VSRX1-PIP-1 --output table
 
 ### Need to create UDR to apply to the VMWORKLOADS subnet - UDR will route 0/0 to the internal LB VIP
 <pre lang= >
-Create the UDR
+Create the Route Table
 az network route-table create  --name UDR-TO-ILB --resource-group RG-LB-TEST -l eastus
 
-Create the route
+Create the route (UDR)
 az network route-table route create --name DEF-TO-ILB -g RG-LB-TEST --route-table-name UDR-TO-ILB --address-prefix 0.0.0.0/0 --next-hop-type VirtualAppliance --next-hop-ip-address 10.0.1.254
 
 Route creation check
