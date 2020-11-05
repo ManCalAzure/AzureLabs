@@ -261,15 +261,12 @@ az network vnet subnet update --vnet-name SPOKE-VNET --name VMWORKLOADS --resour
 ### Check web server effective route table to ensure UDR is applied
 <pre lang= >
 az network nic show-effective-route-table --name WEB-eth0 --resource-group RG-LB-TEST --output table
-
-Source    State    Address Prefix    Next Hop Type    Next Hop IP
---------  -------  ----------------  ---------------  -------------
+Source    State    Address Prefix    Next Hop Type     Next Hop IP
+--------  -------  ----------------  ----------------  -------------
 Default   Active   10.80.0.0/16      VnetLocal
 Default   Active   10.0.0.0/16       VNetPeering
-Default   Active   0.0.0.0/0         Internet
-Default   Active   10.0.0.0/8        None
-Default   Active   100.64.0.0/10     None
-Default   Active   192.168.0.0/16    None
+Default   Invalid  0.0.0.0/0         Internet
+User      Active   0.0.0.0/0         VirtualAppliance  10.0.1.254 >>>>> This quad zero route overrides VNET/subnet default & points to the ILB
 </pre>
 
 
