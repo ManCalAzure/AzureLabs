@@ -139,14 +139,14 @@ az network nic update --resource-group RG-LB-TEST --name VSRX2-ge1 --network-sec
 ### Create the vSRX Firewalls, and the web server VMs
 <pre lang= >
 <b>First - Accept the Juniper Networks license agreement</b>
-az vm image terms accept --urn juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-byol:19.42.2
+az vm image terms accept --urn juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-payg-b1:19.42.2
 
 VSRX1
-az vm create --resource-group RG-LB-TEST --location eastus --name VSRX1 --size Standard_DS3_v2 --nics VSRX1-fxp0 VSRX1-ge0 VSRX1-ge1 --image juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-byol:19.42.2 --admin-username lab-user --admin-password AzLabPass1234 --boot-diagnostics-storage mcbootdiag --no-wait
+az vm create --resource-group RG-LB-TEST --location eastus --name VSRX1 --size Standard_DS3_v2 --nics VSRX1-fxp0 VSRX1-ge0 VSRX1-ge1 --image juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-payg-b1:19.42.2 --admin-username lab-user --admin-password AzLabPass1234 --boot-diagnostics-storage mcbootdiag --no-wait
 
 
 VSRX2
-az vm create --resource-group RG-LB-TEST --location eastus --name VSRX2 --size Standard_DS3_v2 --nics VSRX2-fxp0 VSRX2-ge0 VSRX2-ge1 --image juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-byol:19.42.2 --admin-username lab-user --admin-password AzLabPass1234 --boot-diagnostics-storage mcbootdiag --no-wait
+az vm create --resource-group RG-LB-TEST --location eastus --name VSRX2 --size Standard_DS3_v2 --nics VSRX2-fxp0 VSRX2-ge0 VSRX2-ge1 --image juniper-networks:vsrx-next-generation-firewall-payg:vsrx-azure-image-payg-b1:19.42.2 --admin-username lab-user --admin-password AzLabPass1234 --boot-diagnostics-storage mcbootdiag --no-wait
 
 Web Server
 az vm create -n WEB-SERVER -g RG-LB-TEST --image UbuntuLTS --admin-username lab-user --admin-password AzLabPass1234 --nics WEB-eth0 --boot-diagnostics-storage mcbootdiag --no-wait
