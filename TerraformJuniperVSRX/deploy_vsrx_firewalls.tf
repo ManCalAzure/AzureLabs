@@ -73,12 +73,12 @@ resource "azurerm_network_interface" "vsrx_ge0_vnics" {
   name                = "vsrx${count.index}-ge0-vnic"
   location            = azurerm_resource_group.rg2.location
   resource_group_name = azurerm_resource_group.rg2.name
-
+  enable_ip_forwarding = true
+  
   ip_configuration {
     name                          = "ipconfig${count.index}"
     subnet_id                     = azurerm_subnet.vsrx_untrust.id
     private_ip_address_allocation = "Dynamic"
-    enable_ip_forwarding          = true
     public_ip_address_id          = azurerm_public_ip.generate_ge0_pips[count.index].id
   }
 }
@@ -88,12 +88,12 @@ resource "azurerm_network_interface" "vsrx_ge1_vnics" {
   name                = "vsrx${count.index}-ge1-vnic"
   location            = azurerm_resource_group.rg2.location
   resource_group_name = azurerm_resource_group.rg2.name
+  enable_ip_forwarding = true
 
   ip_configuration {
     name                          = "ipconfig${count.index}"
     subnet_id                     = azurerm_subnet.vsrx_trust.id
     private_ip_address_allocation = "Dynamic"
-    enable_ip_forwarding          = true
 #    public_ip_address_id          = azurerm_public_ip.generate_ge0_pips[count.index].id
   }
 }
