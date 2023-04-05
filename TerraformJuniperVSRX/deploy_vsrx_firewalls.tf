@@ -78,6 +78,7 @@ resource "azurerm_network_interface" "vsrx_ge0_vnics" {
     name                          = "ipconfig${count.index}"
     subnet_id                     = azurerm_subnet.vsrx_untrust.id
     private_ip_address_allocation = "Dynamic"
+    enable_ip_forwarding          = true
     public_ip_address_id          = azurerm_public_ip.generate_ge0_pips[count.index].id
   }
 }
@@ -92,6 +93,7 @@ resource "azurerm_network_interface" "vsrx_ge1_vnics" {
     name                          = "ipconfig${count.index}"
     subnet_id                     = azurerm_subnet.vsrx_trust.id
     private_ip_address_allocation = "Dynamic"
+    enable_ip_forwarding          = true
 #    public_ip_address_id          = azurerm_public_ip.generate_ge0_pips[count.index].id
   }
 }
