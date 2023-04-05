@@ -117,7 +117,7 @@ resource "azurerm_linux_virtual_machine" "nva_vm" {
   name                = "nva-${random_integer.random_int.result}-${count.index}"
   resource_group_name = azurerm_resource_group.rg2.name
   location            = azurerm_resource_group.rg2.location
-  size                = "Standard_D4_v3"
+  size                = "Standard_D8_v5"
   disable_password_authentication = false
   admin_username      = "<set a username>"
   admin_password      = "<set a password>"   # set the admin password for the NVA
