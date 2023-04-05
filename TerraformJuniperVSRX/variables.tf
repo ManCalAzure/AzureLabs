@@ -17,13 +17,7 @@ variable "tenant_id" {
 variable "azure_account_name" {  
   default = ""
 }
-variable "resource_group_1" {
-    default = ""
-}
 variable "resource_group_2" {
-    default = ""
-}
-variable "location_1" {
     default = ""
 }
 variable "location_2" {
